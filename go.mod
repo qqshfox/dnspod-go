@@ -1,3 +1,3 @@
-module github.com/decker502/dnspod-go
+module github.com/qqshfox/dnspod-go
 
 go 1.13
