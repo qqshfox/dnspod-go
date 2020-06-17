@@ -62,7 +62,7 @@ func (s *DomainsService) ListRecords(domainID string, recordName string) ([]Reco
 		return []Record{}, res, err
 	}
 
-	if wrappedRecords.Status.Code != "1" {
+	if wrappedRecords.Status.Code != "1" && wrappedRecords.Status.Code != "10" {
 		return wrappedRecords.Records, nil, fmt.Errorf("Could not get domains: %s", wrappedRecords.Status.Message)
 	}
 
